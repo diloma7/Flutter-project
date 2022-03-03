@@ -1,4 +1,3 @@
-import 'dart:ui';
 
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
@@ -15,8 +14,8 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
-  List<CategoryModel> categories = new List<CategoryModel>();
-  List<ArticleModel> articles = new List<ArticleModel>();
+  List<CategoryModel> categories = <CategoryModel>[];
+  List<ArticleModel> articles = <ArticleModel>[];
   bool _loading = true;
 
   @override
@@ -157,7 +156,7 @@ class CategoryTitle extends StatelessWidget {
 
 class BlogTile extends StatelessWidget {
   final String imageUrl, title, dec, url;
-  final List<CategoryModel> categories = new List<CategoryModel>();
+  final List<CategoryModel> categories = <CategoryModel>[];
   BlogTile(
       {@required this.imageUrl,
       @required this.title,
